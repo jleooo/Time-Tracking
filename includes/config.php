@@ -4,11 +4,11 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // Database configuration using Railway environment variables
-define('DB_HOST', getenv('mysql.railway.internal'));
-define('DB_USER', getenv('root'));
-define('DB_PASS', getenv('YIBhzPkjVzIuispoAqRrYbxYeJMApaZh'));
-define('DB_NAME', getenv('railway'));
-define('DB_PORT', getenv('3306') ?: 3306); // fallback to 3306 if not set
+define('DB_HOST', getenv('MYSQLHOST'));
+define('DB_USER', getenv('MYSQLUSER'));
+define('DB_PASS', getenv('MYSQLPASSWORD'));
+define('DB_NAME', getenv('MYSQLDATABASE'));
+define('DB_PORT', getenv('MYSQLPORT') ?: 3306); // fallback to 3306 if not set
 
 // Application settings
 define('APP_NAME', 'Time Tracking System');
